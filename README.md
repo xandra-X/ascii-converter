@@ -67,14 +67,11 @@ python3 ascii_video.py photo.jpg --classic                 # clean and steady
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A[Frame or image] --> B[Shrink to a<br>character grid]
-    B --> C[Stretch contrast]
-    C --> D[Brightness picks<br>the character]
-    D --> E[Flicker between<br>similar characters]
-    E --> F[Paint in the<br>source color]
-```
+1. Shrink each frame to a grid of characters
+2. Stretch the contrast
+3. Let brightness pick the character
+4. Flicker between characters of similar density
+5. Paint each one in the source color
 
 The 70 characters are sorted by how much ink each one really uses in your font, so the brightness ramp is measured rather than guessed.
 
